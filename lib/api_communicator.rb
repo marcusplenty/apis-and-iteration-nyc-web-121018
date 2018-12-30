@@ -38,7 +38,7 @@ end
 
 def print_movies(films)
   titles = films.map{|film| film["title"]}
-  print titles
+  puts titles
 end
 
 def show_character_movies(character)
