@@ -8,7 +8,7 @@ def get_character_movies_from_api(character_name)
   response_hash = JSON.parse(response_string)
   response_hash.each do |k1, v1|
     if k1 == :results
-      return 1
+      puts 1
     end 
   end 
 
