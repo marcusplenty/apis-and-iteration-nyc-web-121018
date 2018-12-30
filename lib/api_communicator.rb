@@ -10,8 +10,8 @@ def get_character_movies_from_api(character_name)
     if k1 == "results"
       puts 1
       v1.each do |k2,v2|
+        puts 2
         if v2 == character_name
-          puts 2
           return response_hash[k1]["films"]
         end
       end 
