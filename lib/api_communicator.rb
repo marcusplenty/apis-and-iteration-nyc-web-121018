@@ -18,7 +18,7 @@ def get_character_movies_from_api(character_name)
       end 
     end 
   end
-  final_list = film_apis.map{|url|RestClient.get(url)}
+  final_list = film_apis.map do {|url|RestClient.get(url)}
   print final_list 
     
   # iterate over the response hash to find the collection of `films` for the given
