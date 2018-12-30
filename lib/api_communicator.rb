@@ -11,6 +11,7 @@ def get_character_movies_from_api(character_name)
       v1.each do |k2,v2|
         if k2 == "name" && v2 == character_name
           return response_hash[k1]["films"]
+        end
       end 
     end 
   end 
