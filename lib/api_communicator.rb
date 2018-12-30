@@ -8,10 +8,12 @@ def get_character_movies_from_api(character_name)
   response_hash = JSON.parse(response_string)
   response_hash.each do |k1, v1|
     if k1 == "results"
-      v1.each do |k2,v2|
-        if v2 == character_name
-          return response_hash[k1]["films"]
-        end
+      v1.each_with_index do |hash|
+        hash.each do |k2,v2|
+          if v2 == character_name
+            puts 2
+            return response_hash[k1][hash]
+
       end 
     end 
   end 
