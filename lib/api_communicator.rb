@@ -22,9 +22,9 @@ def get_character_movies_from_api(character_name)
     unparsed = RestClient.get(url)
     JSON.parse(unparsed)
   end 
-    
-  print final_list 
-    
+  final_list
+  
+  
   # iterate over the response hash to find the collection of `films` for the given
   #   `character`
   # collect those film API urls, make a web request to each URL to get the info
@@ -37,7 +37,9 @@ def get_character_movies_from_api(character_name)
 end
 
 def print_movies(films)
-  # some iteration magic and puts out the movies in a nice list
+  films.map do |film|
+    film["title"]
+  end 
 end
 
 def show_character_movies(character)
